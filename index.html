@@ -1,86 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
 <meta charset="UTF-8">
 <title>Frki Art</title>
-
 <style>
 body {
-  margin: 0;
-  background: #000;
+  background-color: #000;
   color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 20px;
 }
 
 h1 {
-  margin-top: 40px;
   font-size: 48px;
-  letter-spacing: 2px;
-}
-
-p {
-  opacity: 0.8;
   margin-bottom: 40px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
+/* Stil za figure sa caption */
+figure {
+  display: inline-block;
+  margin: 20px;
 }
 
-.img-box {
+figcaption {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* Stil za overlay tekst preko slike */
+.slika-sa-tekstom {
   position: relative;
-  overflow: hidden;
-  border-radius: 8px;
+  display: inline-block;
+  margin: 20px;
 }
 
-.img-box img {
-  width: 100%;
+.slika-sa-tekstom img {
   display: block;
+  max-width: 500px;
+  height: auto;
 }
 
-/* WATERMARK */
-.img-box::after {
-  content: "Frki Art";
+.tekst-na-slici {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  font-size: 32px;
-  color: rgba(0, 0, 0, 0.4); /* crna, 40% */
-  font-family: cursive;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-footer {
-  opacity: 0.4;
-  padding: 20px;
-  font-size: 14px;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  font-size: 16px;
 }
 </style>
 </head>
-
 <body>
 
-<h1>Frki Art</h1>
-<p>Dark digital art • symbols • underground aesthetics</p>
+<h1>Frki Art Galerija</h1>
 
-<div class="gallery">
+<!-- Slika sa tekstom ispod -->
+<figure>
+  <img src="Frki Art 01.jpeg" alt="Frki Art 01">
+  <figcaption>Ovo je tekst ispod prve slike</figcaption>
+</figure>
 
-  <div class="img-box">
-    <img src="Frki Art 01.jpeg">
-  </div>
-
-  <div class="img-box">
-    <img src="Frki Art 02.jpeg">
-  </div>
-
-  <div class="img-box">
-    <img src="Frki Art 03.jpeg">
-  </div>
-
+<!-- Slika sa tekstom preko -->
+<div class="slika-sa-tekstom">
+  <img src="Frki Art 01.jpeg" alt="Frki Art 01">
+  <div class="tekst-na-slici">Tekst preko prve slike</div>
 </div>
+
+</body>
+</html>
