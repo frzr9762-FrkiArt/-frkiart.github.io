@@ -1,43 +1,110 @@
-.img-box::after {
-  content: "Frki Art";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  font-size: 28px;
-  color: rgba(0,0,0,0.4);
-  font-family: cursive;
-  pointer-events: none;
-  white-space: nowrap;
-}
-.img-box::after {
-  content: "FRKI ART";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  color: rgba(255,255,255,0.12);
-  transform: rotate(-30deg);
-  pointer-events: none;
-  text-transform: uppercase;
-}
-.img-box {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frki Art</title>
 
-.img-box:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
-.img-box img {
-  transition: opacity 0.3s ease;
-}
+    h1 {
+      margin-top: 40px;
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
 
-.img-box:hover img {
-  opacity: 0.92;
-}
+    p {
+      opacity: 0.85;
+      max-width: 900px;
+      margin: 30px auto 50px auto;
+      line-height: 1.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .img-box {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .img-box:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .img-box img {
+      width: 100%;
+      display: block;
+    }
+
+    /* WATERMARK */
+    .img-box::after {
+      content: "FRKI ART";
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.12);
+      transform: rotate(-30deg);
+      pointer-events: none;
+      text-transform: uppercase;
+    }
+
+    footer {
+      opacity: 0.5;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Frki Art</h1>
+
+  <p>
+    Frki Art is a dark digital art project focused on underground aesthetics,
+    gothic symbolism, abstract realities, and raw emotional expression.
+    Each artwork is a unique visual statement inspired by darkness,
+    mystery, and the unseen layers of the human mind.
+  </p>
+
+  <div class="gallery">
+
+    <div class="img-box">
+      <img src="Frki Art 01.jpeg">
+    </div>
+
+    <div class="img-box">
+      <img src="Frki Art 02.jpeg">
+    </div>
+
+    <div class="img-box">
+      <img src="Frki Art 03.jpeg">
+    </div>
+
+  </div>
+
+  <footer>
+    © Frki Art
+  </footer>
+
+</body>
+</html>
